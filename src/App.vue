@@ -1,32 +1,44 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app>
+    <NavBar />
+    <!-- <SideBar /> -->
+    <v-content>
+      <transition name="fade" mode="out-in" appear>
+        <router-view />
+      </transition>
+    </v-content>
+  </v-app>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.fade-enter {
+  opacity: 0;
 }
 
-#nav {
-  padding: 30px;
+.fade-enter-active,
+.fade-enter-active {
+  transition: opacity 0.5s ease-out;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
+
+<script>
+// import SideBar from './components/SideBar'
+import NavBar from './components/NavBar'
+
+export default {
+  name: 'App',
+
+  components: {
+    // SideBar,
+    NavBar
+  },
+
+  data: () => ({
+    //
+  })
+}
+</script>

@@ -1,18 +1,101 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-container>
+    <v-row>
+      <v-col md="8" col="4">
+        <h2 class="htmlTag">
+          <i> &lt;html &gt;</i>
+        </h2>
+        <h2 class="bodyTag">
+          <i>&lt;body &gt;</i>
+        </h2>
+
+        <h2 class="h1Tag">
+          <i>&lt;h1 &gt;</i>
+        </h2>
+
+        <div class="mainText">
+          <h1>Hello,</h1>
+          <h1 class="font-weight-white">I'm Ashish Bisht,</h1>
+          <h1>
+            Full Stack Developer.
+            <i>&lt;h1&gt;</i>
+          </h1>
+          <p>Python | Javascript</p>
+          <v-btn outlined to="/contact">
+            Contact Me
+          </v-btn>
+        </div>
+        <br />
+        <br />
+        <h2 class="bodyTag">
+          <i>&lt;/body &gt;</i>
+        </h2>
+        <h2 class="htmlTag">
+          <i>&lt;/html &gt;</i>
+        </h2>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+<style scoped>
+.htmlTag {
+  padding-left: 0px;
+}
 
-export default {
-  name: "Home",
-  components: {
-    HelloWorld
+.bodyTag {
+  padding-left: 10px;
+}
+
+.h1Tag {
+  padding-left: 15px;
+}
+
+h2 {
+  color: blue;
+  padding-bottom: 30px;
+}
+
+i {
+  /* font-family: La Belle Aurore, cursive; */
+  font-size: 1rem;
+  color: blue;
+}
+
+.mainText {
+  padding-left: 30px;
+  font-size: 1.7rem;
+
+  /* text-shadow: 2px 2px 5px grey; */
+}
+
+@media (max-width: 640px) {
+  .mainText {
+    font-size: 0.9rem;
   }
-};
+  i {
+    /* font-family: La Belle Aurore, cursive; */
+    font-size: 0.7rem;
+    color: blue;
+  }
+  h2 {
+    color: blue;
+    padding-bottom: 5px;
+  }
+}
+</style>
+
+<script>
+export default {
+  name: 'Home',
+  components: {
+    // HelloWorld
+  },
+
+  data () {
+    return {
+      techs: ['Python', 'Javascript', 'Django', 'Vue', 'AWS', 'Linux', 'OSX']
+    }
+  }
+}
 </script>
