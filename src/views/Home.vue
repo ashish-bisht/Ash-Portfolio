@@ -52,14 +52,14 @@
 }
 
 h2 {
-  color: blue;
+  color: navy;
   padding-bottom: 30px;
 }
 
 i {
   /* font-family: La Belle Aurore, cursive; */
   font-size: 1rem;
-  color: blue;
+  color: navy;
 }
 
 .mainText {
@@ -74,13 +74,13 @@ i {
     font-size: 0.9rem;
   }
   i {
-    /* font-family: La Belle Aurore, cursive; */
+    font-family: La Belle Aurore, cursive;
     font-size: 0.7rem;
-    color: blue;
+    color: navy;
   }
   h2 {
-    color: blue;
-    padding-bottom: 5px;
+    color: navy;
+    padding-bottom: px;
   }
 }
 </style>

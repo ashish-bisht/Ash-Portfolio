@@ -3,9 +3,7 @@
     <NavBar />
     <!-- <SideBar /> -->
     <v-content>
-      <transition name="fade" mode="out-in" appear>
-        <router-view />
-      </transition>
+      <router-view />
     </v-content>
   </v-app>
 </template>

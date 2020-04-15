@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container justify="center" align="center">
     <v-row>
       <v-col>
         <div class="contactHolder">
@@ -70,12 +70,60 @@
         </div>
       </v-col>
     </v-row>
+    <v-divider></v-divider>
+    <v-divider></v-divider>
+
+    <v-row align="center" justify="center">
+      <v-col>
+        <transition name="fade">
+          <div>
+            <v-card
+              align="center"
+              justify="center"
+              class="mx-auto"
+              dark
+              max-width="400"
+            >
+              <v-card-title>
+                <v-btn text href="https://github.com/ashish-bisht/"
+                  ><v-icon large>mdi-github</v-icon></v-btn
+                >
+                <v-spacer></v-spacer>
+                <v-btn text href="https://www.linkedin.com/in/ashish-bisht723/"
+                  ><v-icon large>mdi-linkedin</v-icon></v-btn
+                >
+              </v-card-title>
+
+              <!-- <v-card-text class="headline font-weight-bold">
+            My Social Accounts
+          </v-card-text> -->
+            </v-card>
+          </div>
+        </transition>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <style scoped>
 .myRow {
   margin-top: 30px;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-avtive {
+  transition: opacity 1s;
+}
+
+.fade-leave {
+}
+
+.fade-leave-active {
+  transition: opacity 1s;
+  opacity: 0;
 }
 </style>
 
